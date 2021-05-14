@@ -6,6 +6,7 @@ class manage
 {
     char *p;
     int code;
+
     float cost;
     public:
         manage()
