@@ -12,9 +12,12 @@ class manage
         manage()
         {
             p=new char[20];
+
             cout<<"Enter Item name:";
-            cin>>p;
+            cin.ignore();
+            cin.getline(p,19);
             cout<<"Enter Item Code:";
+            cin.ignore();
             cin>>code;
             cout<<"Enter Item Cost:";
             cin>>cost;
