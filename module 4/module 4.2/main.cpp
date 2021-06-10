@@ -22,11 +22,11 @@ void Bank:: init_ac()
 {
     cout<<"Enter the depositor name:";
     cin.getline(name,20);
-    cout<<"\nEnter account number:";
+    cout<<"Enter account number:";
     cin>>ac_no;
-    cout<<"\nEnter the type of account:";
+    cout<<"Enter the type of account:";
     cin>>ac_type;
-    cout<<"\nEnter Initial amount:";
+    cout<<"Enter Initial amount:";
     cin>>balance;
 
 }
@@ -48,8 +48,11 @@ void Bank:: withdraw_amount()
 void Bank::display()
 {
     cout<<endl;
-    cout<<setw(20)<<"NAME"<<setw(20)<<"AMOUNT"<<endl;
-    cout<<setw(20)<<name<<setw(20)<<balance<<endl;
+    cout<<"\t\tACCOUNT SUMMARY\n\n";
+    cout<<"NAME : "<<name<<endl;
+    cout<<"\nA/c type : "<<ac_type;
+    cout<<"\nA/c number : "<<ac_no;
+    cout<<"\nAvailable Balance : "<<balance<<endl<<endl;
 }
 int main()
 {
@@ -57,6 +60,7 @@ int main()
     h1.init_ac();
     h1.display();
     h1.deposite_amount();
+    h1.display();
     h1.withdraw_amount();
     h1.display();
     return 0;
