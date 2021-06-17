@@ -1,6 +1,4 @@
-#include<iostream>
-#include <iomanip>
-#include<conio.h>
+#include<bits/stdc++.h>
 #define MAX_REC 10
 using namespace std;
 class Inventory{
@@ -14,7 +12,8 @@ class Inventory{
 
 void Inventory :: getdata(){
     cout<<"\nEnter Item Name : ";
-    cin>>itemName;
+    cin.ignore();
+    cin.getline(itemName,20);
     cout<<"Enter Code : ";
     cin>>code;
     cout<<"Enter Cost : ";
@@ -23,7 +22,7 @@ void Inventory :: getdata(){
 
 void Inventory :: showdata(){
     cout<<endl;
-    cout<<setw(8)<<itemName;
+    cout<<setw(13)<<itemName;
     cout<<setw(10)<<code;
     cout<<setw(15)<<cost;
 }
@@ -42,13 +41,12 @@ int main(){
         record[i].getdata();
 
     cout<<"\n\n---Stock Information---\n";
-    cout<<"\n"<<setw(8)<<"Item Name"
+    cout<<"\n"<<setw(13)<<"Item Name"
         <<setw(10)<<"Code"
         <<setw(15)<<"Cost"<<endl;
     cout<<"-------------------------------------------";
 
     for(i=0;i<n;i++)
         record[i].showdata();
-
-    getch();
+    cout<<endl;
 }
