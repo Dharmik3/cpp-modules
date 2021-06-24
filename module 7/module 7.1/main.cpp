@@ -29,13 +29,13 @@ int Employee :: count;
 
 int main()
 {
-Employee dharm,nnp,krish;
+Employee dharm,naksh,krish;
 dharm.setData();
 dharm.getData();
 Employee::getCount();
 
-nnp.setData();
-nnp.getData();
+naksh.setData();
+naksh.getData();
 Employee ::getCount();
 
 krish.setData();
