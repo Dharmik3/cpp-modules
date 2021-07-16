@@ -41,9 +41,12 @@ void arr_2d::prnt(){
      }
 }
 int main() {
-    arr_2d *arr1 = new arr_2d;
-    arr1->inpt();
-    arr1->prnt();
+ //arr_2d *arr1 = new arr_2d;
+   // arr1->inpt();
+   // arr1->prnt();
 
+arr_2d obj;
+obj.inpt();
+obj.prnt();
     return 0;
 }

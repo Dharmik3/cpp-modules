@@ -59,7 +59,7 @@ class manage
     }
 int main()
 {   int size;
-    cout<<"How many products ou wants to enter:";
+    cout<<"How many products do you wants to enter:";
     cin>>size;
     manage qty[size];
     horizontalLine();
