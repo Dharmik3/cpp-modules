@@ -6,37 +6,25 @@ using namespace std;
 class tolwr{
     char* str;
     //istream extraction operator ' >> ' Overloading as Global Functions
-	friend istream & operator>>(istream & in,tolwr &rhs);
+	friend istream & operator>>(istream & in,tolwr &);
 	//ostream insertion operator ' << ' Overloading as Global Functions
-	friend  ostream &operator<<( ostream &os,tolwr &rhs);
+	friend  ostream &operator<<( ostream &os,tolwr &);
 public:
 
 // No-args constructor
     tolwr()
-    : str{ nullptr }
-    {
+    {}
 
-    str = new char[1];
-    *str = '\0';
-}
-
-/Overloaded constructor
+//Overloaded constructor
     tolwr(const char* s)
-    : str{ nullptr }
-    {
 
-    if (s == nullptr) {
-        str = new char[1];
-        *str = '\0';
-    }
-    else {
+     {
         str = new char[ strlen(s) + 1];
         strcpy(str,s);
     }
 
 // Copy constructor
 tolwr(const tolwr& source)
-    : str{ nullptr }
     {
     str = new char[ strlen(source.str) + 1];
     strcpy(str,source.str);
@@ -72,19 +60,21 @@ tolwr &operator=(const tolwr& rhs)
 }
 };
 //ostream insertion operator ' << ' Overloading as Global Functions
- ostream &operator<<( ostream &os,tolwr &rhs){
+ ostream& operator<<( ostream &os,tolwr &rhs){
 	os << rhs.str;
 	return os;
 }
 
 //istream extraction operator ' >> ' Overloading as Global Functions
  istream &operator>>( istream &in,tolwr &rhs){
-	char *buff  = new char[1000];
-	in >> buff;
-	rhs = tolwr{buff};
-	delete [] buff;
+     char* temp= new char[15];
+    in>>temp;
+    rhs.str=new char[strlen(temp)+1];
+    strcpy(rhs.str,temp);
+    delete []temp;
 	return in;
-}
+    }
+
 int main(){
     tolwr k1("Mr.");
 	tolwr k2("DP");
