@@ -29,10 +29,7 @@ tolwr(const tolwr& source)
     str = new char[ strlen(source.str) + 1];
     strcpy(str,source.str);
 }
-//Moev Constructor
-// tolwr(tolwr&& source) noexcept
-//     :str{ source.str } {
-//     }
+
 //Copy Assignment Overloading
 tolwr &operator=(const tolwr& rhs)
 {
@@ -45,14 +42,7 @@ tolwr &operator=(const tolwr& rhs)
     return *this;
 }
 
-//Move Assignment Overloading
-// tolwr& operator=(tolwr&& rhs) noexcept {
-//     if (this == &rhs) { return *this; }
-//     delete[] str;
-//     str = rhs.str;
-//     rhs.str = nullptr;
-//     return *this;
-// }
+
 // Destructor
     ~tolwr() {
 

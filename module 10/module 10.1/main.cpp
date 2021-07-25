@@ -18,17 +18,10 @@ public:
 // Overloaded constructor
     tolwr(const char* s)
      {
-
-    if (s == '\0') {
-        str = new char[1];
-        *str = '\0';
-    }
-    else
-     {
         str = new char[std::strlen(s) + 1];
         strcpy(str,s);
      }
-}
+
 // Destructor
     ~tolwr() {
 
