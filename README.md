@@ -1,8 +1,8 @@
 # CVM University 2nd sem OOP In C++
 ## It's include all programs of lab manual with solution.
-How to contribute?
+### How to contribute?
 
-do you want to contribute?
+### Do you want to contribute?
 follow the steps below:
 
 
@@ -13,7 +13,7 @@ follow the steps below:
 5. Create a new Pull Request
 
 
-All Problem(questions) list in "index.pdf" file.
+All Problem(questions) list is in "index.pdf" file.
 
 You can download zip file or you can clone all practicals in your loacl computer.
 
